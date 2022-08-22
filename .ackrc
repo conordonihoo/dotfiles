@@ -1,0 +1,5 @@
+--color-filename=bright_red
+--color-lineno=bright_magenta
+--color-match=on_blue
+--follow
+--ignore-case

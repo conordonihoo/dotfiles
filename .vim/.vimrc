@@ -46,15 +46,6 @@ map <C-l> <C-W>l
 " Visual mode pressing # searches for the current selection
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
-" Return to last edit position when opening files
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-" Status line
-" Always show the status line
-set laststatus=2
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
 " Highlighting
 autocmd colorscheme * highlight StatusLine cterm=bold  ctermbg=black
 autocmd colorscheme * highlight CursorLine cterm=none  ctermbg=black

@@ -1,6 +1,3 @@
-" Colorscheme
-colo apprentice
-
 " Skinny cursor
 let &t_SI = "\<esc>[6 q"
 let &t_SR = "\<esc>[6 q"
@@ -63,3 +60,6 @@ map <C-x>l <C-w>L
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
 syntax on
+
+" Colorscheme
+colo apprentice

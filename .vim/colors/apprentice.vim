@@ -126,7 +126,7 @@ hi! link markdownItalic Preproc
 hi! link asciidocQuotedEmphasized Preproc
 
 if s:t_Co >= 256
-  hi Normal ctermfg=250 ctermbg=235 cterm=NONE
+  hi Normal ctermfg=250 ctermbg=234 cterm=NONE
   hi NonText ctermfg=240 ctermbg=NONE cterm=NONE
   hi EndOfBuffer ctermfg=240 ctermbg=NONE cterm=NONE
   hi LineNr ctermfg=250 ctermbg=235 cterm=NONE

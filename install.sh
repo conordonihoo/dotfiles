@@ -11,7 +11,7 @@ cp .ackrc ~/
 
 # VIM -----------------------------------------------------
 # Create vim configuration directory
-cp -r .vim/colors/ ~/.vim/
+cp -r .vim/colors/ ~/.vim/colors/
 cp .vim/.vimrc ~/
 
 # TMUX ----------------------------------------------------

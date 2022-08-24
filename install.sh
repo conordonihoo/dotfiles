@@ -1,7 +1,3 @@
-# Update submodules in dotfiles
-git submodule init
-git submodule update
-
 # SHELL ---------------------------------------------------
 # Copy shell-related configuration files
 cp .profile ~/

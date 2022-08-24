@@ -9,7 +9,7 @@ Follow these instructions to setup and use the dotfiles:
     * c
 2. Clone the repo.
   ```sh
-  git clone blablabla
+  git clone https://github.com/conordonihoo/dotfiles.git
   ```
 3. Install.
   ```sh

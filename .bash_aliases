@@ -27,7 +27,6 @@ fd() {
 
 # wttr.in weather and moon phase
 alias wthr='curl wttr.in'
-alias mun='curl wttr.in/moon'
 
 # git aliases
 alias gits="git status"

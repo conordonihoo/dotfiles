@@ -21,6 +21,7 @@ set smartcase
 set rnu
 set noswapfile
 set t_Co=256
+set t_md=
 set showmatch
 
 let g:netrw_liststyle= 3

@@ -1,8 +1,7 @@
 # Dotfiles
 ## About
 The point of this repo is to have an easy way to reproduce the settings I use when coding.
-## Visuals
-Here is an example of what the coding environment will look like with these dotfiles.
+## Visuals (using the standard macOS Terminal)
 ![Alt text](./demo.png?raw=True "Title")
 ## Installation
 Follow these instructions to setup and use the dotfiles:

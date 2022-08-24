@@ -48,7 +48,7 @@ map <C-l> <C-W>l
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
 " Highlighting
-autocmd colorscheme * highlight StatusLine cterm=bold  ctermbg=black
+autocmd colorscheme * highlight StatusLine cterm=none  ctermbg=black
 autocmd colorscheme * highlight CursorLine cterm=none  ctermbg=black
 
 syntax on

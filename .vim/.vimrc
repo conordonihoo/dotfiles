@@ -1,3 +1,11 @@
+" Colorscheme
+colo apprentice
+
+" Skinny cursor
+let &t_SI = "\<esc>[6 q"
+let &t_SR = "\<esc>[6 q"
+let &t_EI = "\<esc>[6 q"
+
 set background=dark
 set cindent
 set ruler
@@ -25,6 +33,7 @@ set t_Co=256
 set t_md=
 set showmatch
 
+" tree listing
 let g:netrw_liststyle= 3
 let g:netrw_browse_split= 3
 autocmd FileType netrw setl bufhidden=delete
@@ -45,11 +54,12 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Visual mode pressing # searches for the current selection
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+map <C-x>j <C-w>J
+map <C-x>k <C-w>K
+map <C-x>h <C-w>H
+map <C-x>l <C-w>L
 
-" Highlighting
-autocmd colorscheme * highlight StatusLine cterm=none  ctermbg=black
-autocmd colorscheme * highlight CursorLine cterm=none  ctermbg=black
+" Visual mode pressing * searches for the current selection
+vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
 syntax on

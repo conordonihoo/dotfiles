@@ -71,3 +71,5 @@ PS1="[\[\e[032;038m\]\d \t\[\e[;0m\] \[\e[049;034;1m\]name\[\e[;0m\] @ \[\e[049;
 
 # Colloquial Prompt
 PS1="\[${CYAN}\]\u \[$BASE0\]| \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" |\")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]"$'\n\$ \[$RESET\]'
+# xterm feature to have skinny cursor on command line
+printf '\033[6 q'

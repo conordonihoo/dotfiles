@@ -2,7 +2,7 @@
 ## About
 The point of this repo is to have an easy way to reproduce the settings I use when coding.
 ## Visuals
-Using the standard macOS Terminal, the dotfiles will enhance your coding environment to look like this:
+The dotfiles will enhance your coding environment to look like this (standard macOS Terminal):
 ![Alt text](./demo.png?raw=True "Title")
 ## Installation
 Follow these instructions to setup and use the dotfiles:

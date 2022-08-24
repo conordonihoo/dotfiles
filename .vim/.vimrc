@@ -27,16 +27,16 @@ let g:netrw_liststyle= 3
 let g:netrw_browse_split= 3
 autocmd FileType netrw setl bufhidden=delete
 
-noremap H 0
-noremap J <C-d>
-noremap K <C-u>
-noremap L $
+nnoremap H 0
+nnoremap J <C-d>
+nnoremap K <C-u>
+nnoremap L $
 
 inoremap kj <esc>
 inoremap KJ <esc>
 
-noremap U <C-e>
-noremap I <C-y>
+nnoremap U <C-e>
+nnoremap I <C-y>
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k

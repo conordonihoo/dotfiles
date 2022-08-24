@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # SHELL ---------------------------------------------------
 # Copy shell-related configuration files
 cp .profile ~/

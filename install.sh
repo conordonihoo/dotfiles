@@ -31,3 +31,6 @@ cp .gitconfig ~/
 # MISC ----------------------------------------------------
 # Copy misc. scripts
 cp repo_statuses.sh ~/
+
+# Update .profile
+source ~/.profile

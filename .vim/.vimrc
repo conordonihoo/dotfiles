@@ -1,3 +1,4 @@
+set background=dark
 set cindent
 set ruler
 set cursorline

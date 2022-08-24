@@ -78,9 +78,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Declare default compiler environtment
-export CXX="g++"
-export CC="gcc"
-export FC="gfortran"
-export FSFLAG="-I"

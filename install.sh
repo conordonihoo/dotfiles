@@ -10,8 +10,12 @@ cp .inputrc $HOME/
 cp .ackrc $HOME/
 
 # VIM -----------------------------------------------------
+# Create colors directory if it does not exist
+if [ ! -d $HOME/.vim/colors ]; then
+    mkdir $HOME/.vim/colors
+fi
 # Create vim configuration directory
-cp -r .vim/colors/ $HOME/.vim/colors/
+cp -r .vim/colors $HOME/.vim/colors
 cp .vim/.vimrc $HOME/
 
 # TMUX ----------------------------------------------------

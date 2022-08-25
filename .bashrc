@@ -78,3 +78,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# add direnv for directory-specfic environment variables
+eval "$(direnv hook bash)"

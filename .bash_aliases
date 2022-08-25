@@ -42,3 +42,7 @@ alias vi="vim"
 # python aliases
 alias python="python3"
 alias pip="pip3"
+
+# docker aliases
+alias dimg='docker images'
+alias dcnt='docker ps -a'

@@ -1,8 +1,8 @@
 # ~/.profile: executed by the command interpreter for login shells.
 
-# load .envrc
-if [ -f ~/.envrc ]; then
-    source ~/.envrc
+# load .startup if it exists
+if [ -f ~/.startup ]; then
+    source ~/.startup
 fi
 
 # if running bash

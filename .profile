@@ -5,9 +5,6 @@ if [ -f ~/.envrc ]; then
     source ~/.envrc
 fi
 
-# colorful terminal
-export TERM="xterm-256color"
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists

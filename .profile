@@ -6,7 +6,7 @@ if [ -f ~/.envrc ]; then
 fi
 
 # colorful terminal
-export TERM="xterm-256-color"
+export TERM="xterm-256color"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

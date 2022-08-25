@@ -2,36 +2,36 @@
 
 # SHELL ---------------------------------------------------
 # Copy shell-related configuration files
-cp .profile ~/
-cp .bashrc ~/
-cp .bash_prompt ~/
-cp .bash_aliases ~/
-cp .inputrc ~/
-cp .ackrc ~/
+cp .profile $HOME/
+cp .bashrc $HOME/
+cp .bash_prompt $HOME/
+cp .bash_aliases $HOME/
+cp .inputrc $HOME/
+cp .ackrc $HOME/
 
 # VIM -----------------------------------------------------
 # Create vim configuration directory
-cp -r .vim/colors/ ~/.vim/colors/
-cp .vim/.vimrc ~/
+cp -r .vim/colors/ $HOME/.vim/colors/
+cp .vim/.vimrc $HOME/
 
 # TMUX ----------------------------------------------------
 # Create tmux configuration directory
-cp .tmux.conf ~/
+cp .tmux.conf $HOME/
 
 # SSH -----------------------------------------------------
 # Create ssh directory if it does not exist
-if [ ! -d ~/.ssh ]; then
-    mkdir ~/.ssh
+if [ ! -d $HOME/.ssh ]; then
+    mkdir $HOME/.ssh
 fi
-cp .ssh/config ~/.ssh
-chmod 0600 ~/.ssh/config
+cp .ssh/config $HOME/.ssh
+chmod 0600 $HOME/.ssh/config
 
 # GIT -----------------------------------------------------
-cp .gitconfig ~/
+cp .gitconfig $HOME/
 
 # MISC ----------------------------------------------------
 # Copy misc. scripts
-cp repo_statuses.sh ~/
+cp repo_statuses.sh $HOME/
 
 # Update .profile
-source ~/.profile
+source $HOME/.profile

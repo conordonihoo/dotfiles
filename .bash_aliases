@@ -3,9 +3,10 @@ alias tmux='tmux -2u'
 
 # ls aliases
 alias ll='ls -alF'
-alias l='ls -CF'
+alias ls='ls -CF'
 
 # searching aliases
+alias grep='grep --color'
 ff() {
     if [ $# = 1 ]; then
         # find file alias: $ff <file name>

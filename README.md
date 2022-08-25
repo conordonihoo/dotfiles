@@ -10,6 +10,7 @@ Follow these instructions to setup and use the dotfiles:
     * Your Unix shell is bash.
     * Vim is installed.
     * tmux is installed.
+    * direnv is installed.
 2. Clone the repo.
   ```sh
   git clone https://github.com/conordonihoo/dotfiles.git

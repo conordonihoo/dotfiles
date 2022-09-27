@@ -10,7 +10,6 @@ set t_Co=256
 " no bold
 set t_md=
 " indent options
-set cindent
 set shiftwidth=4
 set tabstop=4
 set expandtab

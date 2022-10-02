@@ -15,6 +15,8 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set listchars+=tab:\ \ 
+set foldlevel=99
+set foldmethod=indent
 " cursor location
 set cursorline
 set ruler
@@ -22,6 +24,7 @@ set number
 set rnu
 " how vim represents characters
 set encoding=utf-8
+set conceallevel=1
 " search options
 set hlsearch
 set ignorecase
@@ -47,6 +50,9 @@ set showmatch
 let g:netrw_liststyle= 3
 let g:netrw_browse_split= 3
 autocmd FileType netrw setl bufhidden=delete
+" options for splitting the window
+set splitbelow
+set splitright
 
 nnoremap H 0
 nnoremap J <C-d>

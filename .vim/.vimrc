@@ -17,6 +17,8 @@ set expandtab
 set listchars+=tab:\ \ 
 set foldlevel=99
 set foldmethod=indent
+set breakindent
+set showbreak=↪\ 
 " cursor location
 set cursorline
 set ruler
@@ -24,7 +26,7 @@ set number
 set rnu
 " how vim represents characters
 set encoding=utf-8
-set conceallevel=1
+set conceallevel=2
 " search options
 set hlsearch
 set ignorecase
@@ -38,8 +40,6 @@ set nobomb
 " no annoying bells
 set novisualbell
 set noerrorbells
-" turn off word wrapping
-set nowrap
 " turn off .viminfo
 set viminfo=
 " turn off swap files
@@ -54,32 +54,28 @@ autocmd FileType netrw setl bufhidden=delete
 set splitbelow
 set splitright
 
-nnoremap H 0
-nnoremap J <C-d>
-nnoremap K <C-u>
-nnoremap L $
-
+" remapping keys
+noremap H 0
+noremap J <C-d>
+noremap K <C-u>
+noremap L $
 inoremap kj <esc>
 inoremap KJ <esc>
-
 nnoremap U <C-e>
 nnoremap I <C-y>
-
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
 map <C-x>j <C-w>J
 map <C-x>k <C-w>K
 map <C-x>h <C-w>H
 map <C-x>l <C-w>L
-
 " Visual mode pressing * searches for the current selection
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
 " syntax highlighting
 syntax on
 
-" Colorscheme
+" default colorscheme
 colo apprentice

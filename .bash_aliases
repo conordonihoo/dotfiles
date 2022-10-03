@@ -26,17 +26,15 @@ fd() {
     fi
 }
 
-# wttr.in weather and moon phase
-alias wthr='curl wttr.in'
-alias moon='curl wttr.in/moon'
-# TODO make the following a function:
-## get moon phase
-#curl wttr.in/moon
-#echo -e "\x1b[3A\x1b[0J"
-#
-## get local weather
-#curl wttr.in
-#echo -e "\x1b[39A\x1b[2K\x1b[2K\x1b[38B\x1b[2K\x1b[1A"
+# get moon phase and weather
+wthr () {
+    # moon
+    curl wttr.in/moon
+    echo -e "\x1b[3A\x1b[0J"
+    # weather
+    curl wttr.in
+    echo -e "\x1b[39A\x1b[2K\x1b[1B\x1b[2K\x1b[37B\x1b[2K\x1b[1A"
+}
 
 # git aliases
 alias gits="git status"

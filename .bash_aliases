@@ -28,6 +28,7 @@ fd() {
 
 # get moon phase and weather
 wthr () {
+    echo ""
     # moon
     curl wttr.in/moon
     echo -e "\x1b[3A\x1b[0J"

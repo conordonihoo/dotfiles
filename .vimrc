@@ -78,4 +78,4 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 syntax on
 
 " default colorscheme
-colo apprentice
+colo winter

@@ -27,7 +27,7 @@ if [ ! -d ~/.vim/after/syntax ]; then
     mkdir ~/.vim/after/syntax
 fi
 # Copy vim configuration files
-cp .vim/.vimrc ~/
+cp .vimrc ~/.vimrc
 cp .vim/colors/* ~/.vim/colors/
 cp .vim/*.vim ~/.vim/after/syntax/
 

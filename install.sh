@@ -18,9 +18,18 @@ fi
 if [ ! -d ~/.vim/colors ]; then
     mkdir ~/.vim/colors
 fi
-# Create vim configuration directory
-cp .vim/colors/* ~/.vim/colors/
+# Create after directory if it does not exist
+if [ ! -d ~/.vim/after ]; then
+    mkdir ~/.vim/after
+fi
+# Create syntax directory if it does not exist
+if [ ! -d ~/.vim/after/syntax ]; then
+    mkdir ~/.vim/after/syntax
+fi
+# Copy vim configuration files
 cp .vim/.vimrc ~/
+cp .vim/colors/* ~/.vim/colors/
+cp .vim/*.vim ~/.vim/after/syntax/
 
 # TMUX ----------------------------------------------------
 # Create tmux configuration directory

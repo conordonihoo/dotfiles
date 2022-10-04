@@ -19,7 +19,7 @@ if [ ! -d ~/.vim/colors ]; then
     mkdir ~/.vim/colors
 fi
 # Create vim configuration directory
-cp .vim/colors/apprentice.vim ~/.vim/colors/
+cp .vim/colors/* ~/.vim/colors/
 cp .vim/.vimrc ~/
 
 # TMUX ----------------------------------------------------

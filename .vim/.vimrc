@@ -3,6 +3,12 @@ let &t_SI = "\<esc>[6 q"
 let &t_SR = "\<esc>[6 q"
 let &t_EI = "\<esc>[6 q"
 
+" syntax highlighting
+syntax on
+
+" default colorscheme
+colo apprentice
+
 " disable background color erase (BCE)
 set t_ut=
 " 256 colors
@@ -17,8 +23,6 @@ set expandtab
 set listchars+=tab:\ \ 
 set foldlevel=99
 set foldmethod=indent
-set breakindent
-set showbreak=↪\ 
 " cursor location
 set cursorline
 set ruler
@@ -26,7 +30,8 @@ set number
 set rnu
 " how vim represents characters
 set encoding=utf-8
-set conceallevel=2
+set conceallevel=1
+set backspace=indent,eol,start
 " search options
 set hlsearch
 set ignorecase
@@ -73,9 +78,3 @@ map <C-x>h <C-w>H
 map <C-x>l <C-w>L
 " Visual mode pressing * searches for the current selection
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-
-" syntax highlighting
-syntax on
-
-" default colorscheme
-colo apprentice

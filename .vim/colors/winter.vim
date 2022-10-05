@@ -129,7 +129,7 @@ if s:t_Co >= 256
   hi Normal ctermfg=250 ctermbg=234 cterm=NONE
   hi NonText ctermfg=240 ctermbg=NONE cterm=NONE
   hi EndOfBuffer ctermfg=240 ctermbg=NONE cterm=NONE
-  hi LineNr ctermfg=250 ctermbg=235 cterm=NONE
+  hi LineNr ctermfg=242 ctermbg=235 cterm=NONE
   hi FoldColumn ctermfg=242 ctermbg=234 cterm=NONE
   hi Folded ctermfg=242 ctermbg=234 cterm=NONE
   hi MatchParen ctermfg=229 ctermbg=234 cterm=NONE

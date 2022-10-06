@@ -129,11 +129,11 @@ if s:t_Co >= 256
   hi Normal ctermfg=250 ctermbg=234 cterm=NONE
   hi NonText ctermfg=240 ctermbg=NONE cterm=NONE
   hi EndOfBuffer ctermfg=240 ctermbg=NONE cterm=NONE
-  hi LineNr ctermfg=242 ctermbg=235 cterm=NONE
-  hi FoldColumn ctermfg=242 ctermbg=234 cterm=NONE
-  hi Folded ctermfg=242 ctermbg=234 cterm=NONE
+  hi LineNr ctermfg=243 ctermbg=235 cterm=NONE
+  hi FoldColumn ctermfg=243 ctermbg=234 cterm=NONE
+  hi Folded ctermfg=243 ctermbg=234 cterm=NONE
   hi MatchParen ctermfg=229 ctermbg=234 cterm=NONE
-  hi SignColumn ctermfg=242 ctermbg=234 cterm=NONE
+  hi SignColumn ctermfg=243 ctermbg=234 cterm=NONE
   hi Pmenu ctermfg=250 ctermbg=238 cterm=NONE
   hi PmenuSbar ctermfg=NONE ctermbg=240 cterm=NONE
   hi PmenuSel ctermfg=235 ctermbg=66 cterm=NONE
@@ -177,7 +177,7 @@ if s:t_Co >= 256
   hi! link Terminal Normal
   hi! link CursorIM Cursor
   hi! link QuickFixLine Search
-  hi Comment ctermfg=242 ctermbg=NONE cterm=NONE
+  hi Comment ctermfg=245 ctermbg=NONE cterm=NONE
   hi Conceal ctermfg=250 ctermbg=NONE cterm=NONE
   hi Constant ctermfg=208 ctermbg=NONE cterm=NONE
   hi Error ctermfg=131 ctermbg=NONE cterm=reverse

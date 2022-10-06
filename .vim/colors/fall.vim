@@ -77,6 +77,7 @@ if !exists('g:gruvbox_contrast_light')
   let g:gruvbox_contrast_light='medium'
 endif
 
+set background=dark
 let s:is_dark=(&background == 'dark')
 
 " }}}

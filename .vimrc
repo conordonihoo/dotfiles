@@ -53,6 +53,8 @@ autocmd FileType netrw setl bufhidden=delete
 " options for splitting the window
 set splitbelow
 set splitright
+" auto complete
+set wildmenu
 
 " remapping keys
 noremap H 0
@@ -78,4 +80,4 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 syntax on
 
 " default colorscheme
-colo winter
+colo fall

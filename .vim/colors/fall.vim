@@ -514,14 +514,8 @@ call s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:bg2, s:fg1, s:inverse)
-call s:HL('StatusLineNC', s:bg1, s:fg4, s:inverse)
-
 " The column separating vertically split windows
-call s:HL('VertSplit', s:bg3, s:vert_split)
-
-" Current match in wildmenu completion
-call s:HL('WildMenu', s:blue, s:bg2, s:bold)
+call s:HL('VertSplit', s:bg2, s:bg2)
 
 " Directory names, special names in listing
 hi! link Directory GruvboxGreenBold
@@ -636,6 +630,12 @@ hi! link Structure GruvboxAqua
 " typedef
 hi! link Typedef GruvboxYellow
 
+call s:HL('StatusLine',   s:bg2, s:fg1, s:inverse)
+call s:HL('StatusLineNC', s:bg2, s:fg4, s:inverse)
+
+" Current match in wildmenu completion
+call s:HL('WildMenu', s:orange, s:bg2, s:bold)
+
 " }}}
 " Completion Menu: {{{
 
@@ -643,11 +643,11 @@ if version >= 700
   " Popup menu: normal item
   call s:HL('Pmenu', s:fg1, s:bg2)
   " Popup menu: selected item
-  call s:HL('PmenuSel', s:bg2, s:blue, s:bold)
+  call s:HL('PmenuSel', s:bg2, s:gb.faded_orange, s:bold)
   " Popup menu: scrollbar
-  call s:HL('PmenuSbar', s:none, s:bg2)
+  call s:HL('PmenuSbar', s:none, s:bg4)
   " Popup menu: scrollbar thumb
-  call s:HL('PmenuThumb', s:none, s:bg4)
+  call s:HL('PmenuThumb', s:none, s:bg3)
 endif
 
 " }}}

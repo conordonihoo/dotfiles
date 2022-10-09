@@ -135,9 +135,9 @@ if s:t_Co >= 256
   hi MatchParen ctermfg=229 ctermbg=234 cterm=NONE
   hi SignColumn ctermfg=243 ctermbg=234 cterm=NONE
   hi Pmenu ctermfg=250 ctermbg=238 cterm=NONE
-  hi PmenuSbar ctermfg=NONE ctermbg=240 cterm=NONE
+  hi PmenuSbar ctermfg=NONE ctermbg=243 cterm=NONE
   hi PmenuSel ctermfg=235 ctermbg=66 cterm=NONE
-  hi PmenuThumb ctermfg=66 ctermbg=66 cterm=NONE
+  hi PmenuThumb ctermfg=66 ctermbg=241 cterm=NONE
   hi ErrorMsg ctermfg=131 ctermbg=235 cterm=reverse
   hi ModeMsg ctermfg=108 ctermbg=235 cterm=reverse
   hi MoreMsg ctermfg=66 ctermbg=NONE cterm=NONE
@@ -152,14 +152,14 @@ if s:t_Co >= 256
   hi CursorColumn ctermfg=NONE ctermbg=236 cterm=NONE
   hi CursorLineNr ctermfg=73 ctermbg=236 cterm=NONE
   hi CursorLine ctermfg=NONE ctermbg=236 cterm=NONE
-  hi StatusLine ctermfg=235 ctermbg=101 cterm=NONE
-  hi StatusLineNC ctermfg=101 ctermbg=238 cterm=NONE
+  hi StatusLine ctermfg=250 ctermbg=238 cterm=NONE
+  hi StatusLineNC ctermfg=244 ctermbg=238 cterm=NONE
   hi StatusLineTerm ctermfg=235 ctermbg=101 cterm=NONE
   hi StatusLineTermNC ctermfg=101 ctermbg=238 cterm=NONE
   hi Visual ctermfg=110 ctermbg=235 cterm=reverse
   hi VisualNOS ctermfg=NONE ctermbg=NONE cterm=underline
   hi VertSplit ctermfg=238 ctermbg=238 cterm=NONE
-  hi WildMenu ctermfg=235 ctermbg=110 cterm=NONE
+  hi WildMenu ctermfg=73 ctermbg=238 cterm=bold
   hi DiffAdd ctermfg=111 ctermbg=235 cterm=reverse
   hi DiffChange ctermfg=188 ctermbg=235 cterm=reverse
   hi DiffDelete ctermfg=222 ctermbg=235 cterm=reverse

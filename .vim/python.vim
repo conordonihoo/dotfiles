@@ -69,6 +69,7 @@ syntax keyword Normal Pi conceal cchar=Π
 syntax keyword Normal pi conceal cchar=π
 syntax keyword Normal rho RHO conceal cchar=ρ
 syntax keyword Normal sigma SIGMA conceal cchar=σ
+syntax keyword Normal Sigma conceal cchar=∑
 syntax keyword Normal tau TAU conceal cchar=τ
 syntax keyword Normal upsilon UPSILON conceal cchar=υ
 syntax keyword Normal Phi conceal cchar=Φ

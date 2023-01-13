@@ -1,8 +1,3 @@
-" Skinny cursor
-let &t_SI = "\<esc>[6 q"
-let &t_SR = "\<esc>[6 q"
-let &t_EI = "\<esc>[6 q"
-
 " disable background color erase (BCE)
 set t_ut=
 " 256 colors
@@ -42,8 +37,6 @@ set novisualbell
 set noerrorbells
 " turn off .viminfo
 set viminfo=
-" turn off swap files
-set noswapfile
 " show matching braces
 set showmatch
 " tree listing
@@ -57,7 +50,7 @@ set splitright
 set wildmenu
 
 " remapping keys
-noremap H 0
+noremap H ^
 noremap J <C-d>
 noremap K <C-u>
 noremap L $
@@ -80,4 +73,4 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 syntax on
 
 " default colorscheme
-colo fall
+colo winter

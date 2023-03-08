@@ -47,7 +47,6 @@ autocmd FileType netrw setl bufhidden=delete
 set splitbelow
 set splitright
 " auto complete
-set wildmode=longest,list,full
 set wildmenu
 
 " remapping keys

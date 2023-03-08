@@ -49,7 +49,7 @@ set splitright
 " auto complete
 set wildmenu
 
-" remapping keys
+" remapping keys (movement)
 noremap H ^
 noremap J <C-d>
 noremap K <C-u>
@@ -66,6 +66,9 @@ map <C-x>j <C-w>J
 map <C-x>k <C-w>K
 map <C-x>h <C-w>H
 map <C-x>l <C-w>L
+" remapping keys (auto complete)
+inoremap <tab> <C-n>
+inoremap <esc> <C-e>
 " Visual mode pressing * searches for the current selection
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
@@ -85,9 +88,9 @@ endif
 " install plugins by executing `:PlugInstall`
 call plug#begin('~/.vim')
 Plug 'sirver/ultisnips'
-    let g:UltiSnipsExpandTrigger = '<tab>'
-    let g:UltiSnipsJumpForwardTrigger = '<tab>'
-    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+    let g:UltiSnipsExpandTrigger = '<n-tab>'
+    let g:UltiSnipsJumpForwardTrigger = '<n-tab>'
+    let g:UltiSnipsJumpBackwardTrigger = '<p-tab>'
 Plug 'lervag/vimtex'
     let g:tex_flavor='latex'
     let g:vimtex_view_method='zathura'

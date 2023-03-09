@@ -48,6 +48,7 @@ set splitbelow
 set splitright
 " auto complete
 set wildmenu
+set completeopt=menuone
 
 " remapping keys
 noremap H ^
@@ -69,60 +70,120 @@ map <C-x>l <C-w>L
 " Visual mode pressing * searches for the current selection
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 " auto complete
-inoremap a a<C-n><C-p>
-inoremap b b<C-n><C-p>
-inoremap c c<C-n><C-p>
-inoremap d d<C-n><C-p>
-inoremap e e<C-n><C-p>
-inoremap f f<C-n><C-p>
-inoremap g g<C-n><C-p>
-inoremap h h<C-n><C-p>
-inoremap i i<C-n><C-p>
-inoremap j j<C-n><C-p>
-inoremap k k<C-n><C-p>
-inoremap l l<C-n><C-p>
-inoremap m m<C-n><C-p>
-inoremap n n<C-n><C-p>
-inoremap o o<C-n><C-p>
-inoremap p p<C-n><C-p>
-inoremap q q<C-n><C-p>
-inoremap r r<C-n><C-p>
-inoremap s s<C-n><C-p>
-inoremap t t<C-n><C-p>
-inoremap u u<C-n><C-p>
-inoremap v v<C-n><C-p>
-inoremap w w<C-n><C-p>
-inoremap x x<C-n><C-p>
-inoremap y y<C-n><C-p>
-inoremap z z<C-n><C-p>
-inoremap A A<C-n><C-p>
-inoremap B B<C-n><C-p>
-inoremap C C<C-n><C-p>
-inoremap D D<C-n><C-p>
-inoremap E E<C-n><C-p>
-inoremap F F<C-n><C-p>
-inoremap G G<C-n><C-p>
-inoremap H H<C-n><C-p>
-inoremap I I<C-n><C-p>
-inoremap J J<C-n><C-p>
-inoremap K K<C-n><C-p>
-inoremap L L<C-n><C-p>
-inoremap M M<C-n><C-p>
-inoremap N N<C-n><C-p>
-inoremap O O<C-n><C-p>
-inoremap P P<C-n><C-p>
-inoremap Q Q<C-n><C-p>
-inoremap R R<C-n><C-p>
-inoremap S S<C-n><C-p>
-inoremap T T<C-n><C-p>
-inoremap U U<C-n><C-p>
-inoremap V V<C-n><C-p>
-inoremap W W<C-n><C-p>
-inoremap X X<C-n><C-p>
-inoremap Y Y<C-n><C-p>
-inoremap Z Z<C-n><C-p>
+function! MyAutoComplete(input)
+    if a:input == 'on'
+        inoremap a a<C-n><C-p>
+        inoremap b b<C-n><C-p>
+        inoremap c c<C-n><C-p>
+        inoremap d d<C-n><C-p>
+        inoremap e e<C-n><C-p>
+        inoremap f f<C-n><C-p>
+        inoremap g g<C-n><C-p>
+        inoremap h h<C-n><C-p>
+        inoremap i i<C-n><C-p>
+        inoremap j j<C-n><C-p>
+        inoremap k k<C-n><C-p>
+        inoremap l l<C-n><C-p>
+        inoremap m m<C-n><C-p>
+        inoremap n n<C-n><C-p>
+        inoremap o o<C-n><C-p>
+        inoremap p p<C-n><C-p>
+        inoremap q q<C-n><C-p>
+        inoremap r r<C-n><C-p>
+        inoremap s s<C-n><C-p>
+        inoremap t t<C-n><C-p>
+        inoremap u u<C-n><C-p>
+        inoremap v v<C-n><C-p>
+        inoremap w w<C-n><C-p>
+        inoremap x x<C-n><C-p>
+        inoremap y y<C-n><C-p>
+        inoremap z z<C-n><C-p>
+        inoremap A A<C-n><C-p>
+        inoremap B B<C-n><C-p>
+        inoremap C C<C-n><C-p>
+        inoremap D D<C-n><C-p>
+        inoremap E E<C-n><C-p>
+        inoremap F F<C-n><C-p>
+        inoremap G G<C-n><C-p>
+        inoremap H H<C-n><C-p>
+        inoremap I I<C-n><C-p>
+        inoremap J J<C-n><C-p>
+        inoremap K K<C-n><C-p>
+        inoremap L L<C-n><C-p>
+        inoremap M M<C-n><C-p>
+        inoremap N N<C-n><C-p>
+        inoremap O O<C-n><C-p>
+        inoremap P P<C-n><C-p>
+        inoremap Q Q<C-n><C-p>
+        inoremap R R<C-n><C-p>
+        inoremap S S<C-n><C-p>
+        inoremap T T<C-n><C-p>
+        inoremap U U<C-n><C-p>
+        inoremap V V<C-n><C-p>
+        inoremap W W<C-n><C-p>
+        inoremap X X<C-n><C-p>
+        inoremap Y Y<C-n><C-p>
+        inoremap Z Z<C-n><C-p>
+    else
+        iunmap a
+        iunmap b
+        iunmap c
+        iunmap d
+        iunmap e
+        iunmap f
+        iunmap g
+        iunmap h
+        iunmap i
+        iunmap j
+        iunmap k
+        iunmap l
+        iunmap m
+        iunmap n
+        iunmap o
+        iunmap p
+        iunmap q
+        iunmap r
+        iunmap s
+        iunmap t
+        iunmap u
+        iunmap v
+        iunmap w
+        iunmap x
+        iunmap y
+        iunmap z
+        iunmap A
+        iunmap B
+        iunmap C
+        iunmap D
+        iunmap E
+        iunmap F
+        iunmap G
+        iunmap H
+        iunmap I
+        iunmap J
+        iunmap K
+        iunmap L
+        iunmap M
+        iunmap N
+        iunmap O
+        iunmap P
+        iunmap Q
+        iunmap R
+        iunmap S
+        iunmap T
+        iunmap U
+        iunmap V
+        iunmap W
+        iunmap X
+        iunmap Y
+        iunmap Z
+    endif
+endfunction
 inoremap <tab> <C-n>
-inoremap <C-[> <C-e>
+inoremap <C-b> <C-e>
+" turn my auto complete off for LaTeX files
+call MyAutoComplete('on')
+autocmd FileType tex call MyAutoComplete('off')
 
 " syntax highlighting
 syntax on

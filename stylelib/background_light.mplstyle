@@ -1,7 +1,7 @@
 font.family       : serif
 axes.grid         : True
 axes.facecolor    : EBEBEB
-savefig.facecolor : EBEBEB
+savefig.facecolor : white
 figure.facecolor  : white
 legend.facecolor  : white
 text.color        : black

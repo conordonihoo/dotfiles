@@ -1,7 +1,7 @@
 font.family       : serif
 axes.grid         : True
 axes.facecolor    : 362E4A
-savefig.facecolor : 362E4A
+savefig.facecolor : 1C1826
 figure.facecolor  : 1C1826
 legend.facecolor  : 1C1826
 text.color        : white

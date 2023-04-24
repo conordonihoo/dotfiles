@@ -46,6 +46,18 @@ chmod 0600 ~/.ssh/config
 # GIT -----------------------------------------------------
 cp .gitconfig ~/
 
+# MATPLOTLIB ----------------------------------------------
+# Create config directory if it does not exist
+if [ ! -d ~/.config ]; then
+    mkdir ~/.config
+fi
+# Create matplotlib directory if it does not exist
+if [ ! -d ~/.config/matplotlib ]; then
+    mkdir ~/.config/matplotlib
+fi
+# Copy vim configuration files
+cp -r stylelib/ ~/.config/matplotlib/
+
 # MISC ----------------------------------------------------
 # Copy misc. scripts
 cp repo_statuses.sh ~/

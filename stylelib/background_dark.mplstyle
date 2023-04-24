@@ -1,0 +1,16 @@
+font.family       : serif
+axes.grid         : True
+axes.facecolor    : 362E4A
+savefig.facecolor : 362E4A
+figure.facecolor  : 1C1826
+legend.facecolor  : 1C1826
+text.color        : white
+axes.labelcolor   : white
+axes.edgecolor    : white
+xtick.color       : white
+ytick.color       : white
+xtick.direction   : in
+ytick.direction   : in
+grid.linestyle    : solid
+grid.linewidth    : 0.6
+grid.alpha        : 0.9

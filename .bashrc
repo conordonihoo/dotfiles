@@ -40,5 +40,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# matplotlib style directory
+export MPLCONFIGDIR=$HOME/.config/matplotlib
+
 # add direnv for directory-specfic environment variables
 eval "$(direnv hook bash)"

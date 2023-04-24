@@ -1,0 +1,16 @@
+font.family       : serif
+axes.grid         : True
+axes.facecolor    : EBEBEB
+savefig.facecolor : EBEBEB
+figure.facecolor  : white
+legend.facecolor  : white
+text.color        : black
+axes.labelcolor   : black
+axes.edgecolor    : black
+xtick.color       : black
+ytick.color       : black
+xtick.direction   : in
+ytick.direction   : in
+grid.linestyle    : solid
+grid.linewidth    : 0.6
+grid.alpha        : 0.9

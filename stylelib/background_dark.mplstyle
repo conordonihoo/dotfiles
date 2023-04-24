@@ -1,4 +1,5 @@
 font.family       : serif
+mathtext.fontset  : dejavuserif
 axes.grid         : True
 axes.facecolor    : 362E4A
 savefig.facecolor : 1C1826

@@ -55,8 +55,12 @@ fi
 if [ ! -d ~/.config/matplotlib ]; then
     mkdir ~/.config/matplotlib
 fi
-# Copy vim configuration files
-cp -r stylelib/ ~/.config/matplotlib/
+# Create stylelib directory if it does not exist
+if [ ! -d ~/.config/matplotlib/stylelib ]; then
+    mkdir ~/.config/matplotlib/stylelib
+fi
+# Copy matplotlib configuration files
+cp .matplotlib/* ~/.config/matplotlib/stylelib/
 
 # MISC ----------------------------------------------------
 # Copy misc. scripts

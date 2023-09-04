@@ -29,16 +29,8 @@ if [ "$(uname -m)" == "arm64" ]; then
     export BASH_SILENCE_DEPRECATION_WARNING=1
 fi
 
-# pretty prompt
-source ~/.bash_prompt
-
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# Alias definitions
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # matplotlib style directory
 export MPLCONFIGDIR=$HOME/.config/matplotlib

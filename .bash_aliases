@@ -55,6 +55,3 @@ alias pip="pip3"
 # docker aliases
 alias dimg='docker images'
 alias dcnt='docker ps -a'
-vm() {
-    docker run -it --rm conordonihoo/vm:$1
-}

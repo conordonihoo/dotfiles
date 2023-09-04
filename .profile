@@ -2,9 +2,17 @@
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
+    # source .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
 	    source "$HOME/.bashrc"
+    fi
+    # source .bash_prompt if it exists
+    if [ -f "$HOME/.bash_prompt" ]; then
+	    source "$HOME/.bash_prompt"
+    fi
+    # source .bash_aliases if it exists
+    if [ -f "$HOME/.bash_aliases" ]; then
+	    source "$HOME/.bash_aliases"
     fi
 fi
 

@@ -26,5 +26,5 @@ Follow these instructions to setup and use the dotfiles:
   ```
 3. Install.
   ```sh
-  ./install.sh
+  cd dotfiles && ./install.sh
   ```

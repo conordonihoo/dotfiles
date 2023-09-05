@@ -1,5 +1,5 @@
 " General ----------------------------------------------------
-"
+
 " disable background color erase (BCE)
 set t_ut=
 " 256 colors
@@ -126,5 +126,5 @@ set statusline+=\ %3p%%\          " percentage
 "    hi Conceal ctermbg=none
 "" initialize plugins
 "call plug#end()
-"
+
 " End --------------------------------------------------------

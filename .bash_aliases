@@ -38,9 +38,11 @@ wthr () {
 }
 
 # git aliases
+alias gitb="git branch"
 alias gits="git status"
 alias gitl="git log"
 alias gitll="git log --decorate --graph --oneline"
+alias gup="git submodule init && git submodule update"
 gitch () { 
     git checkout `git branch | grep $1` 
 }
@@ -55,3 +57,10 @@ alias pip="pip3"
 # docker aliases
 alias dimg='docker images'
 alias dcnt='docker ps -a'
+
+# trick aliases
+alias trick-CP="trick-CP TRICKIFIED=1"
+alias trick-RB="make spotless && trick-CP"
+
+# Cesium aliases
+alias ceez="node server.js --public --port 5080"

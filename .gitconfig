@@ -8,5 +8,16 @@
     editor = vim 
 [init]
     defaultBranch = main
-[pull]
-	rebase = false
+[http]
+	sslVerify = false
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[difftool "vimdiff"]
+    cmd = vimdiff $REMOTE $LOCAL
+[alias]
+	d = difftool
+	m = mergetool
+[merge]
+	tool = vimdiff

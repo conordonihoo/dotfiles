@@ -1,5 +1,7 @@
 # set default tmux to use 256 colors and utf-8 encoding
 alias tmux='tmux -2u'
+alias tmuxL='tmux new-session -s devL'
+alias tmuxR='tmux new-session -s devR -t devL'
 
 # ls aliases
 alias ll='ls -alF'
@@ -23,6 +25,47 @@ fd() {
     else
         # find directory alias: $fd <searching directory> <directory name>
         find "$1" -type d | grep -i "$2"
+    fi
+}
+greplace() {
+    if [[ $# -lt 2 || $# -gt 4 ]]; then
+        echo "Usage: greplace [-l] <file> <search> <replace>"
+        echo "or"
+        echo "Usage: greplace [-l] <search> <replace>"
+        return 1
+    fi
+
+    local replace_line=false
+
+    if [[ $1 == "-l" ]]; then
+        replace_line=true
+        shift
+    fi
+
+    if [[ $# -eq 3 ]]; then
+        local file=$1
+        local search=$2
+        local replace=$3
+
+        if [[ ! -f $file ]]; then
+            echo "File not found!"
+            return 1
+        fi
+
+        if $replace_line; then
+            sed -i "/$search/c\\$replace" "$file"
+        else
+            sed -i "s/$search/$replace/g" "$file"
+        fi
+    else
+        local search=$1
+        local replace=$2
+
+        if $replace_line; then
+            find . -type f -exec sed -i "/$search/c\\$replace" {} +
+        else
+            find . -type f -exec sed -i "s/$search/$replace/g" {} +
+        fi
     fi
 }
 
@@ -64,3 +107,6 @@ alias trick-RB="make spotless && trick-CP"
 
 # Cesium aliases
 alias ceez="node server.js --public --port 5080"
+
+# vs code
+alias code="${VSCODE_GIT_ASKPASS_NODE%/*}/bin/remote-cli/code"

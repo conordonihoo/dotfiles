@@ -8,6 +8,10 @@ cp .bash_prompt ~/
 cp .bash_aliases ~/
 cp .inputrc ~/
 cp .ackrc ~/
+# Create config directory if it does not exist
+if [ ! -d ~/.config ]; then
+    mkdir ~/.config
+fi
 
 # VIM -----------------------------------------------------
 # Create vim directory if it does not exist
@@ -18,21 +22,19 @@ fi
 if [ ! -d ~/.vim/colors ]; then
     mkdir ~/.vim/colors
 fi
-# Create after directory if it does not exist
-if [ ! -d ~/.vim/after ]; then
-    mkdir ~/.vim/after
-fi
 # Create syntax directory if it does not exist
-if [ ! -d ~/.vim/after/syntax ]; then
-    mkdir ~/.vim/after/syntax
+if [ ! -d ~/.vim/syntax ]; then
+    mkdir ~/.vim/syntax
 fi
 # Copy vim configuration files
 cp .vimrc ~/.vimrc
 cp .vim/colors/* ~/.vim/colors/
-cp .vim/*.vim ~/.vim/after/syntax/
+cp .vim/syntax/* ~/.vim/syntax/
+
+# NEOVIM --------------------------------------------------
+cp -r nvim/ ~/.config/
 
 # TMUX ----------------------------------------------------
-# Create tmux configuration directory
 cp .tmux.conf ~/
 
 # SSH -----------------------------------------------------
@@ -47,10 +49,6 @@ chmod 0600 ~/.ssh/config
 cp .gitconfig ~/
 
 # MATPLOTLIB ----------------------------------------------
-# Create config directory if it does not exist
-if [ ! -d ~/.config ]; then
-    mkdir ~/.config
-fi
 # Create matplotlib directory if it does not exist
 if [ ! -d ~/.config/matplotlib ]; then
     mkdir ~/.config/matplotlib
@@ -64,7 +62,8 @@ cp .matplotlib/* ~/.config/matplotlib/stylelib/
 
 # MISC ----------------------------------------------------
 # Copy misc. scripts
-cp repo_statuses.sh ~/
+cp gitExec.sh ~/
+cp runTest.sh ~/
 
 # Update .profile
 source ~/.profile

@@ -11,19 +11,19 @@
 set background=dark
 
 hi clear
-let g:colors_name = 'apprentice'
+let g:colors_name = 'winter'
 
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 1
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   let g:terminal_ansi_colors = ['#1c1c1c', '#af5f5f', '#5f875f', '#87875f', '#5f87af', '#5f5f87', '#5f8787', '#6c6c6c', '#444444', '#ff8700', '#87af87', '#ffffaf', '#87afd7', '#8787af', '#5fafaf', '#ffffff']
 endif
-hi Normal guifg=#bcbcbc guibg=#262626 gui=NONE cterm=NONE
+hi Normal guifg=#bcbcbc guibg=#1c1c1c gui=NONE cterm=NONE
 hi NonText guifg=#585858 guibg=NONE gui=NONE cterm=NONE
 hi EndOfBuffer guifg=#585858 guibg=NONE gui=NONE cterm=NONE
-hi LineNr guifg=#6c6c6c guibg=#1c1c1c gui=NONE cterm=NONE
-hi FoldColumn guifg=#6c6c6c guibg=#1c1c1c gui=NONE cterm=NONE
-hi Folded guifg=#6c6c6c guibg=#1c1c1c gui=NONE cterm=NONE
+hi LineNr guifg=#6c6c6c guibg=#262626 gui=NONE cterm=NONE
+hi FoldColumn guifg=#6c6c6c guibg=#303030 gui=reverse cterm=NONE
+hi Folded guifg=#6c6c6c guibg=#262626 gui=NONE cterm=NONE
 hi MatchParen guifg=#ffffaf guibg=#1c1c1c gui=NONE cterm=NONE
 hi SignColumn guifg=#6c6c6c guibg=#1c1c1c gui=NONE cterm=NONE
 hi Pmenu guifg=#bcbcbc guibg=#444444 gui=NONE cterm=NONE
@@ -44,19 +44,19 @@ hi Cursor guifg=#262626 guibg=#bcbcbc gui=NONE cterm=NONE
 hi CursorColumn guifg=NONE guibg=#303030 gui=NONE cterm=NONE
 hi CursorLineNr guifg=#5fafaf guibg=#303030 gui=NONE cterm=NONE
 hi CursorLine guifg=NONE guibg=#303030 gui=NONE cterm=NONE
-hi StatusLine guifg=#262626 guibg=#87875f gui=NONE cterm=NONE
+hi StatusLine guifg=#87875f guibg=#444444 gui=NONE cterm=NONE
 hi StatusLineNC guifg=#87875f guibg=#444444 gui=NONE cterm=NONE
-hi StatusLineTerm guifg=#262626 guibg=#87875f gui=NONE cterm=NONE
+hi StatusLineTerm guifg=#87875f guibg=#444444 gui=NONE cterm=NONE
 hi StatusLineTermNC guifg=#87875f guibg=#444444 gui=NONE cterm=NONE
 hi Visual guifg=#87afd7 guibg=#262626 gui=reverse cterm=reverse
 hi VisualNOS guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 hi VertSplit guifg=#444444 guibg=#444444 gui=NONE cterm=NONE
 hi WildMenu guifg=#262626 guibg=#87afd7 gui=NONE cterm=NONE
-hi DiffAdd guifg=#87afff guibg=#262626 gui=reverse cterm=reverse
-hi DiffChange guifg=#dfdfdf guibg=#262626 gui=reverse cterm=reverse
-hi DiffDelete guifg=#ffdf87 guibg=#262626 gui=reverse cterm=reverse
-hi DiffText guifg=#afafaf guibg=#262626 gui=reverse cterm=reverse
-hi IncSearch guifg=#262626 guibg=#af5f5f gui=NONE cterm=NONE
+hi DiffAdd guifg=#5f875f guibg=#262626 gui=reverse cterm=reverse
+hi DiffChange guifg=#8787af guibg=#262626 gui=reverse cterm=reverse
+hi DiffDelete guifg=#af5f5f guibg=#262626 gui=reverse cterm=reverse
+hi DiffText guifg=#ffdf87 guibg=#262626 gui=reverse cterm=reverse
+hi IncSearch guifg=#262626 guibg=#afafaf gui=NONE cterm=NONE
 hi Search guifg=#262626 guibg=#ffffaf gui=NONE cterm=NONE
 hi Directory guifg=#5fafaf guibg=NONE gui=NONE cterm=NONE
 hi debugPC guifg=NONE guibg=#5f87af gui=NONE cterm=NONE

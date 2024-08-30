@@ -35,5 +35,8 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # matplotlib style directory
 export MPLCONFIGDIR=$HOME/.config/matplotlib
 
+# add neovim to path
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
 # add direnv for directory-specfic environment variables
 eval "$(direnv hook bash)"

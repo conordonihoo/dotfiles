@@ -1,9 +1,17 @@
 # ~/.bash_prompt: executed by .bashrc
 
-BLUE="\033[38;5;117m"
-GREEN="\033[38;5;71m"
-YELLOW="\033[38;5;179m"
-GREY="\033[38;5;248m"
+SPRING_PINK="\033[38;5;218m"
+SPRING_GREEN="\033[38;5;157m"
+SPRING_PURPLE="\033[38;5;147m"
+SPRING_TEXT="\033[38;5;158m"
+FALL_RED="\033[38;5;131m"
+FALL_GREEN="\033[38;5;108m"
+FALL_BLUE="\033[38;5;110m"
+FALL_TEXT="\033[38;5;187m"
+WINTER_PURPLE="\033[38;5;61m"
+WINTER_GREEN="\033[38;5;108m"
+WINTER_YELLOW="\033[38;5;179m"
+WINTER_TEXT="\033[0m"
 RESET="\033[0m"
 
 parse_git_dirty () {
@@ -11,8 +19,23 @@ parse_git_dirty () {
 (working directory clean)" ]] && echo "*"
 }
 parse_git_branch () {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/*\(.*\)/\1$(parse_git_dirty)/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/*\(.*\)/\1$(parse_git_dirty)/" | cut -f1,2 -d'-'
 }
 
-# [path - branch]
-PS1="\[$GREY\][\[$GREEN\]\w\[$GREY\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" -\")\[$YELLOW\]\$(parse_git_branch)\[$GREY\]] \[$RESET\]"
+# Fall colors
+COLOR1=$FALL_RED
+COLOR2=$FALL_GREEN
+COLOR3=$FALL_BLUE
+COLOR4=$FALL_TEXT
+# Winter colors
+COLOR1=$WINTER_PURPLE
+COLOR2=$WINTER_GREEN
+COLOR3=$WINTER_YELLOW
+COLOR4=$WINTER_TEXT
+# Spring colors
+COLOR1=$SPRING_PINK
+COLOR2=$SPRING_GREEN
+COLOR3=$SPRING_PURPLE
+COLOR4=$SPRING_TEXT
+# Prompt
+PS1="\[$COLOR4\][\[$COLOR1\]\u\[$COLOR4\] : \[$COLOR2\]\w\[$COLOR4\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" :\")\[$COLOR3\]\$(parse_git_branch)\[$COLOR4\]] \[$RESET\]"

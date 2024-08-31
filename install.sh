@@ -32,7 +32,11 @@ cp .vim/colors/* ~/.vim/colors/
 cp .vim/syntax/* ~/.vim/syntax/
 
 # NEOVIM --------------------------------------------------
-cp -r nvim/ ~/.config/
+# Create nvim directory if it does not exist
+if [ ! -d ~/.config/nvim ]; then
+    mkdir ~/.config/nvim
+fi
+cp -r nvim/* ~/.config/nvim/
 
 # TMUX ----------------------------------------------------
 cp .tmux.conf ~/
@@ -62,8 +66,8 @@ cp .matplotlib/* ~/.config/matplotlib/stylelib/
 
 # MISC ----------------------------------------------------
 # Copy misc. scripts
-cp gitExec.sh ~/
-cp runTest.sh ~/
+#cp gitExec.sh ~/
+#cp runTest.sh ~/
 
 # Update .profile
 source ~/.profile

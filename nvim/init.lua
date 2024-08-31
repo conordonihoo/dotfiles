@@ -101,27 +101,6 @@ map('n', '<C-Left>', '<C-w><')
 map('n', '<C-Right>', '<C-w>>')
 map('n', 'zf', 'za')
 
--- Status Line
-
-vim.cmd([[
-  set noshowmode
-  set noruler
-  set laststatus=2
-  set statusline=
-  set statusline+=%#PmenuSel#%{(mode()=='n')?'\ \ NORMAL\ ':''}
-  set statusline+=%#ModeMsg#%{(mode()=='i')?'\ \ INSERT\ ':''}
-  set statusline+=%#DiffText#%{(mode()=='r')?'\ \ RPLACE\ ':''}
-  set statusline+=%#DiffDelete#%{(mode()=='v')?'\ \ VISUAL\ ':''}
-  set statusline+=%#Pmenu#          " color
-  set statusline+=\ %f              " relative path
-  set statusline+=\ %m              " modified [+] flag
-  set statusline+=%=\               " right align
-  set statusline+=%n\               " buffer number
-  set statusline+=%#IncSearch#      " color
-  set statusline+=\ %3l:%-2c\       " line + column
-  set statusline+=%<                " truncate from end if too long
-]])
-
 -- END .VIMRC ---------------------------------------------------------------------
 
 -- Load main config

@@ -19,7 +19,7 @@ return {
 
       -- Set random header
       local home = os.getenv("HOME")
-      local headerData = dofile(home .. "/.config/nvim/lua/art.lua")
+      local headerData = dofile(home .. "/.config/nvim/art.lua")
 
       local function getRandomKey(t)
         local keys = {}

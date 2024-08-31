@@ -6,8 +6,8 @@
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 --
--- File: plugins/alpha-headers.lua
--- Description: Neovim Splash Screen Headers
+-- File: plugins/art.lua
+-- Description: Neovim Splash Screen ASCII art
 -- Author: Conor Donihoo
 return {
   spaceship = {

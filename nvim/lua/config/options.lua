@@ -45,7 +45,7 @@ opt.listchars = {
 }
 
 -- Hide cmd line
-opt.cmdheight = 0 -- more space in the neovim command line for displaying messages
+opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 
 opt.scrolloff = 5 -- minimal number of screen lines to keep above and below the cursor
 opt.sidescrolloff = 3 -- minimal number of screen columns to keep to the left and right (horizontal) of the cursor if wrap is `false`

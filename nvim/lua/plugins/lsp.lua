@@ -8,7 +8,7 @@
 --
 -- File: plugins/lsp.lua
 -- Description: LSP setup and config
--- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
+-- Author: Conor Donihoo
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 return {{
     -- Mason
@@ -201,7 +201,8 @@ return {{
 
             window = {
                 completion = {
-                    winhighlight = "Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel",
+                    border = border "CmpDocBorder",
+                    winhighlight = "Normal:CmpDoc",
                     scrollbar = false
                 },
                 documentation = {

@@ -18,7 +18,7 @@ local s = vim.s
 local indent = 4
 
 cmd([[
-	filetype plugin indent on
+    filetype plugin indent on
 ]])
 
 opt.clipboard = "unnamedplus" -- allow neovim to access the system clipboard
@@ -93,6 +93,22 @@ vim.diagnostic.config({
     virtual_text = false,  -- Disable virtual text
     underline = false,     -- Disable underlines
 })
+
+-- Gitsigns highlighting
+cmd([[
+    highlight GitSignsAddPreview guibg=#2b625f
+    highlight GitSignsAddInline guibg=#3b9754
+    highlight GitSignsDeletePreview guibg=#7f585f
+    highlight GitSignsDeleteInline guibg=#df5353
+]])
+
+-- vimdiff highlighting
+cmd([[
+    autocmd VimEnter * highlight DiffAdd guibg=#2b625f
+    autocmd VimEnter * highlight DiffDelete guibg=#7f585f
+    autocmd VimEnter * highlight DiffText guibg=#cdbc4e
+]])
+
 
 -- Colorscheme
 cmd.colorscheme("rose-pine")

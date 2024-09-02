@@ -37,6 +37,3 @@ export MPLCONFIGDIR=$HOME/.config/matplotlib
 
 # add neovim to path
 export PATH="$PATH:/opt/nvim-linux64/bin"
-
-# add direnv for directory-specfic environment variables
-eval "$(direnv hook bash)"

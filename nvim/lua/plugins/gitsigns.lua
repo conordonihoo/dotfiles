@@ -78,7 +78,7 @@ return { {
         end)
 
         -- Actions
-        vim.keymap.set("n", "<leader>gp", gitsigns.preview_hunk)           -- git diff current hunk
+        vim.keymap.set("n", "<leader>gh", gitsigns.preview_hunk)           -- git diff current hunk
         vim.keymap.set("n", "<leader>ga", gitsigns.stage_hunk)             -- git add current hunk
         vim.keymap.set("n", "<leader>gu", gitsigns.undo_stage_hunk)        -- git restore --staged current hunk
         vim.keymap.set("n", "<leader>gd", ":Gitsigns diffthis<CR> <C-w>H") -- git diff entire file

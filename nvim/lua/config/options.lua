@@ -18,7 +18,7 @@ local s = vim.s
 local indent = 4
 
 cmd([[
-    filetype plugin indent on
+  filetype plugin indent on
 ]])
 
 opt.clipboard = "unnamedplus" -- allow neovim to access the system clipboard
@@ -33,7 +33,6 @@ opt.tabstop = indent -- insert 2 spaces for a tab
 opt.shiftround = true -- use multiple of shiftwidth when indenting with "<" and ">"
 
 -- ui
-opt.lazyredraw = true -- don"t update the display while executing macros
 opt.list = true
 -- You can also add "space" or "eol", but I feel it"s quite annoying
 opt.listchars = {

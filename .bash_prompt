@@ -1,6 +1,6 @@
 # ~/.bash_prompt: executed by .bashrc
 
-SPRING_PINK="\033[38;5;218m"
+SPRING_PINK="\033[38;5;225m"
 SPRING_GREEN="\033[38;5;157m"
 SPRING_PURPLE="\033[38;5;147m"
 SPRING_TEXT="\033[38;5;158m"

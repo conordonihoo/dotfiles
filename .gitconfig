@@ -5,19 +5,19 @@
     default = simple
 [core]
     autocrlf = input
-    editor = vim 
+    editor = vim
 [init]
     defaultBranch = main
 [http]
-	sslVerify = false
+    sslVerify = false
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
-	prompt = false
+    prompt = false
 [difftool "vimdiff"]
-    cmd = vimdiff $REMOTE $LOCAL
+    cmd = nvim -d $REMOTE $LOCAL
 [alias]
-	d = difftool
-	m = mergetool
+    d = difftool
+    m = mergetool
 [merge]
-	tool = vimdiff
+    tool = vimdiff

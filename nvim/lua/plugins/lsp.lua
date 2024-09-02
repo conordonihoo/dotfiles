@@ -70,7 +70,8 @@ return {{
             jsonls = {},
             clangd = {},
             bashls = {},
-            ruff_lsp = {},
+            luau_lsp = {},
+            pyright = {},
             vimls = {},
         },
         -- you can do any additional lsp server setup here

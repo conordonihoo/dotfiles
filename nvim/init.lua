@@ -57,14 +57,14 @@ vim.cmd('syntax on')
 
 -- Remember last position in a file
 vim.cmd([[
-  autocmd BufReadPost * silent! normal! g`"zvzb
+    autocmd BufReadPost * silent! normal! g`"zvzb
 ]])
 
 -- GNC
 vim.cmd([[
-  autocmd BufRead *.sm,S_define set syntax=cpp
-  autocmd BufRead *.config*.txt,*/states/* set syntax=config
-  autocmd BufRead Vagrantfile set syntax=ruby
+    autocmd BufRead *.sm,S_define set syntax=cpp
+    autocmd BufRead *.config*.txt,*/states/* set syntax=config
+    autocmd BufRead Vagrantfile set syntax=ruby
 ]])
 
 -- Remappings

@@ -33,9 +33,6 @@ vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", {}) -- open/close
 vim.keymap.set("n", "<leader>nr", ":NvimTreeRefresh<CR>", {}) -- refresh
 vim.keymap.set("n", "<leader>nf", ":NvimTreeFindFile<CR>", {}) -- search file
 
--- Terminal
-vim.keymap.set("n", "<leader>t", ":NeotermOpen<CR>", {})
-
 -- LSP
 vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>i", vim.diagnostic.open_float, {})

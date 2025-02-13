@@ -71,7 +71,9 @@ def processGitRepo(path: Path, command: GitCommand, branch: Optional[str] = None
             output = repo.git.status()
         elif command == GitCommand.CHECKOUT and branch:
             # Check if branch exists
-            branches = [ref.name for ref in repo.references]
+            local_refs = [ref.name for ref in repo.references]
+            remote_refs = [ref.name.replace('origin/', '') for ref in repo.remote().refs]
+            branches = set(local_refs + remote_refs)
             # check if branch exists
             if branch in branches:
                 output = str(repo.git.checkout(branch))

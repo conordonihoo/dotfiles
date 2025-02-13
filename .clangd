@@ -1,22 +1,4 @@
 CompileFlags:
   Add:
-    # fsw_source includes
-    - -I/home/fireflygnc/fsw_source/common/fsw_common/
-    - -I/home/fireflygnc/fsw_source/common/fsw_common/utils
-    - -I/home/fireflygnc/fsw_source/common/fsw_common/navigation
-    - -I/home/fireflygnc/fsw_source/gnc/
-    - -I/home/fireflygnc/fsw_source/gnc/utils/
-    - -I/home/fireflygnc/fsw_source/gnc/utils/eigen
-    - -I/home/fireflygnc/fsw_source/gnc/utils/thrusters
-    - -I/home/fireflygnc/fsw_source/gnc/generic
-    - -I/home/fireflygnc/fsw_source/gnc/interfaces
-    - -I/home/fireflygnc/fsw_source/gnc/alpha/data
-    - -I/home/fireflygnc/fsw_source/gnc/alpha/algorithms
-    - -I/home/fireflygnc/fsw_source/gnc/alpha/workspaces
-    - -I/home/fireflygnc/fsw_source/gnc/common/workspaces
-    - -I/home/fireflygnc/fsw_source/gnc/common/algorithms
-    # models includes
-    - -I/home/fireflygnc/models/fhw/sensor/gps/icd/
-    - -I/home/fireflygnc/models/
-    # jeod includes
-    - -I/home/fireflygnc/jeod_v3.4/models/
+    # user includes
+    - -I/home/conor/

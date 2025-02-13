@@ -9,25 +9,22 @@ from os import environ
 import subprocess as sp
 
 class GitCommand(Enum):
-    PULL     = 0,
-    STATUS   = 1,
-    CHECKOUT = 2,
+    PULL     = 0
+    STATUS   = 1
+    CHECKOUT = 2
     BRANCH   = 3
 
 class GitResult(Enum):
-    IGNORED  = 0,
-    SUCCESS  = 1,
-    FAILURE  = 2
+    IGNORED = 0
+    SUCCESS = 1
+    FAILURE = 2
 
 class Colors:
-    HEADER = '\033[95m'
-    BLUE = '\033[94m'
-    CYAN = '\033[96m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    RED = '\033[91m'
-    WHITE = '\033[37m'
-    ENDC = '\033[0m'
+    BLUE   = '\033[38;5;147m'
+    GREEN  = '\033[38;5;157m'
+    PINK   = '\033[38;5;225m'
+    RED    = '\033[91m'
+    ENDC   = '\033[0m'
 
 def processGitRepo(path: Path, command: GitCommand, branch: Optional[str] = None) -> Tuple[GitResult, Optional[str], Optional[str]]:
     '''
@@ -56,7 +53,7 @@ def processGitRepo(path: Path, command: GitCommand, branch: Optional[str] = None
                     capture_output=True
                 )
                 if ret.returncode == 0:
-                    output += f'{Colors.GREEN}Updated submodules.{Colors.ENDC}\n'
+                    output += f'{Colors.PINK}Updated submodules.{Colors.ENDC}\n'
                 else:
                     output += f'{Colors.RED}Failed to update submodules:\n{ret.stdout.decode()}\n{ret.stderr.decode()}{Colors.ENDC}\n'
             except Exception as e:
@@ -150,26 +147,27 @@ def main():
         command = GitCommand.BRANCH
         branch = None
     # loop over directory and process each subdir
-    for subdir in sorted(home_path.iterdir()):
-        if subdir.is_dir():
-            result, current_branch, output = processGitRepo(subdir, command, branch)
-            if result == GitResult.IGNORED:
-                continue
-            # repository name header
-            print(f'{Colors.YELLOW}┌──── {subdir.name}{Colors.ENDC}', end='')
-            if result == GitResult.SUCCESS:
-                print(f'{Colors.YELLOW} / {Colors.GREEN}{current_branch}')
-                if output:
-                    formatted_output = formatOutput(output)
-                    if formatted_output:
-                        print(f'{Colors.YELLOW}│{Colors.ENDC}')
-                        for line in formatted_output.splitlines():
-                            print(f'{Colors.YELLOW}│{Colors.ENDC} {line}')
-            else:
-                print()
-                print(f'{Colors.YELLOW}│{Colors.ENDC} {Colors.RED}Operation failed: {output}{Colors.ENDC}')
-            len_current_branch = len(current_branch) if current_branch is not None else -3
-            print(f'{Colors.YELLOW}└{"─" * (len(subdir.name) + len_current_branch + 8)}{Colors.ENDC}')
+    subdirs = [subdir for subdir in home_path.iterdir() if subdir.is_dir()]
+    subdirs.sort(key=lambda subdir: subdir.name)
+    for subdir in subdirs:
+        result, current_branch, output = processGitRepo(subdir, command, branch)
+        len_box = max(len(subdir.name), 24)
+        if result == GitResult.IGNORED:
+            continue
+        # repository name header
+        print(f'{Colors.GREEN}╭─ {subdir.name}{Colors.ENDC}', end='')
+        if result == GitResult.SUCCESS:
+            print(f'{Colors.GREEN} {"─" * (len_box - len(subdir.name))}╮{Colors.ENDC}')
+            if output:
+                formatted_output = formatOutput(output)
+                if formatted_output:
+                    print(f'{Colors.GREEN}│{Colors.ENDC}')
+                    for line in formatted_output.splitlines():
+                        print(f'{Colors.GREEN}│{Colors.ENDC} {line}')
+        else:
+            print()
+            print(f'{Colors.GREEN}│{Colors.ENDC} {Colors.RED}Operation failed: {output}{Colors.ENDC}')
+        print(f'{Colors.GREEN}╰→ {Colors.BLUE}{current_branch}{Colors.ENDC}')
     print()
 
 if __name__ == '__main__':

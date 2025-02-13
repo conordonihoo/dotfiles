@@ -8,6 +8,7 @@ cp .bash_prompt ~/
 cp .bash_aliases ~/
 cp .inputrc ~/
 cp .ackrc ~/
+cp .clangd ~/
 # Create config directory if it does not exist
 if [ ! -d ~/.config ]; then
     mkdir ~/.config
@@ -66,8 +67,7 @@ cp .matplotlib/* ~/.config/matplotlib/stylelib/
 
 # MISC ----------------------------------------------------
 # Copy misc. scripts
-#cp gitExec.sh ~/
-#cp runTest.sh ~/
+cp gitExec.py ~/
 
 # Update .profile
 source ~/.profile

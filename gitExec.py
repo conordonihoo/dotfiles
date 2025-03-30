@@ -123,7 +123,7 @@ def main():
     '''
     # parse args
     parser = argparse.ArgumentParser(description='Process git repositories in subdirectories')
-    parser.add_argument('--home', type=str, default=environ['SIMENV'], help='Path to home directory containing git repositories')
+    parser.add_argument('--home', type=str, default=environ['HOME'], help='Path to home directory containing git repositories')
     group = parser.add_mutually_exclusive_group()
     group.add_argument('-p', '--pull', action='store_true', help='Pull and update all repositories')
     group.add_argument('-s', '--status', action='store_true', help='Show status of all repositories')

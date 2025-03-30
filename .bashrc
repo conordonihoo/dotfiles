@@ -6,6 +6,14 @@ case $- in
       *) return;;
 esac
 
+# start SSH agent automatically
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    # start SSH agent
+    eval "$(ssh-agent -s)" &>/dev/null
+    # add private key
+    ssh-add ~/.ssh/id_rsa 2>/dev/null
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth

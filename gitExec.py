@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/conor/.venv/bin/python
 
 import argparse
 from enum import Enum

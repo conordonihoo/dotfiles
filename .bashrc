@@ -45,3 +45,6 @@ export MPLCONFIGDIR=$HOME/.config/matplotlib
 
 # add neovim to path
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# add local bin to path
+export PATH="$HOME/.local/bin:$PATH"

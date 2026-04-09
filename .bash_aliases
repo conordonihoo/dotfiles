@@ -91,7 +91,7 @@ gitch () {
 }
 
 # vim aliases
-alias vi="nvim"
+alias vi="vim"
 
 # trick aliases
 alias trick-CP="trick-CP TRICKIFIED=1"
